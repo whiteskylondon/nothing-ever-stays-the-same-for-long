@@ -18,13 +18,17 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: 20,
-          color: 'white',
-          fontFamily: 'serif',
-          fontWeight: 300,
         }}
       >
-        NE
+        <img
+          src="https://nothing-ever-stays-the-same.vercel.app/logo/logo_white_on_black.png"
+          alt="Logo"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+          }}
+        />
       </div>
     ),
     {
