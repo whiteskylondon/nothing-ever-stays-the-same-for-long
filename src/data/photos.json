@@ -1,0 +1,93 @@
+[
+  {
+    "id": "hamburg-01",
+    "src": "/pictures/hamburg.png",
+    "width": 1200,
+    "height": 800,
+    "alt": "Hamburg cityscape at night",
+    "caption": "Hamburg, Germany",
+    "tags": ["architecture", "night", "city"],
+    "series": "cities",
+    "date": "2024-01-15",
+    "location": "Hamburg, Germany",
+    "commentary": "The port city of Hamburg reveals its industrial character most clearly at night. The cranes and warehouses along the Elbe create a rhythmic pattern against the dark sky, while the lights of the city reflect off the water. This image captures the tension between the city's maritime heritage and its modern urban development."
+  },
+  {
+    "id": "hong-kong-01",
+    "src": "/pictures/hong_kong_01.png",
+    "width": 1200,
+    "height": 900,
+    "alt": "Hong Kong skyline",
+    "caption": "Hong Kong",
+    "tags": ["architecture", "city", "skyline"],
+    "series": "cities",
+    "date": "2024-01-20",
+    "location": "Hong Kong",
+    "commentary": "Hong Kong's vertical density creates a unique urban landscape where the built environment seems to defy gravity. The interplay of light and shadow across the facades reveals the city's complex relationship with space and time. Each building tells a story of ambition, constraint, and adaptation."
+  },
+  {
+    "id": "london-02",
+    "src": "/pictures/london_02.png",
+    "width": 1000,
+    "height": 1200,
+    "alt": "London architecture",
+    "caption": "London, UK",
+    "tags": ["architecture", "city", "historical"],
+    "series": "cities",
+    "date": "2024-01-25",
+    "location": "London, UK",
+    "commentary": "London's architectural layers span centuries, creating a palimpsest of urban history. The contrast between old and new structures reflects the city's continuous evolution. This image focuses on the geometric patterns and textures that emerge from this architectural dialogue."
+  },
+  {
+    "id": "origin-01",
+    "src": "/pictures/origin_01.png",
+    "width": 800,
+    "height": 1000,
+    "alt": "Origin point",
+    "caption": "Origin",
+    "tags": ["abstract", "geometric", "minimal"],
+    "series": "abstractions",
+    "date": "2024-02-01",
+    "location": "Unknown",
+    "commentary": "Every journey begins somewhere. This image explores the concept of origin through geometric abstraction, where simple forms suggest the beginning of something larger. The composition invites contemplation of starting points and the paths they might lead to."
+  },
+  {
+    "id": "rock-01",
+    "src": "/pictures/rock.png",
+    "width": 1000,
+    "height": 800,
+    "alt": "Rock formation",
+    "caption": "Rock Formation",
+    "tags": ["nature", "rock", "texture", "mountain"],
+    "series": "landscapes",
+    "date": "2024-02-05",
+    "location": "Mountain Region",
+    "commentary": "The permanence of rock contrasts sharply with the ephemeral nature of human experience. This formation has witnessed countless seasons, weather patterns, and geological changes. The texture and form speak to the deep time of the earth, offering a perspective on our own temporal existence."
+  },
+  {
+    "id": "salerno-01",
+    "src": "/pictures/salerno.png",
+    "width": 1200,
+    "height": 800,
+    "alt": "Salerno cityscape",
+    "caption": "Salerno, Italy",
+    "tags": ["architecture", "city", "coastal"],
+    "series": "cities",
+    "date": "2024-02-10",
+    "location": "Salerno, Italy",
+    "commentary": "Salerno's coastal location creates a unique relationship between the built environment and the natural landscape. The city's architecture responds to the Mediterranean light and the proximity to water, creating spaces that blur the boundary between interior and exterior, land and sea."
+  },
+  {
+    "id": "solden-01",
+    "src": "/pictures/solden.png",
+    "width": 1000,
+    "height": 1200,
+    "alt": "Sölden mountain landscape",
+    "caption": "Sölden, Austria",
+    "tags": ["mountain", "landscape", "alpine"],
+    "series": "landscapes",
+    "date": "2024-02-15",
+    "location": "Sölden, Austria",
+    "commentary": "The alpine landscape of Sölden presents a stark beauty that challenges human scale. The mountains rise with an authority that dwarfs any human construction, yet the traces of human presence—roads, buildings, infrastructure—create a dialogue between the natural and the constructed. This image captures that tension."
+  }
+]
