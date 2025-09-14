@@ -19,10 +19,50 @@ export const metadata: Metadata = {
   title: 'nothing ever stays the same for long',
   description: 'A collection of photography and video exploring the relationship between permanence and change in urban and natural landscapes.',
   authors: [{ name: 'Daniel Roy' }],
+  keywords: ['photography', 'video', 'urban landscapes', 'architecture', 'travel', 'art'],
+  creator: 'Daniel Roy',
+  publisher: 'Daniel Roy',
+  metadataBase: new URL('https://nothing-ever-stays-the-same.vercel.app'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/apple-icon.png',
+  },
   openGraph: {
     title: 'nothing ever stays the same for long',
     description: 'A collection of photography and video exploring the relationship between permanence and change in urban and natural landscapes.',
     type: 'website',
+    siteName: 'nothing ever stays the same for long',
+    locale: 'en_US',
+    url: 'https://nothing-ever-stays-the-same.vercel.app',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'nothing ever stays the same for long',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'nothing ever stays the same for long',
+    description: 'A collection of photography and video exploring the relationship between permanence and change in urban and natural landscapes.',
+    images: ['/opengraph-image'],
+    creator: '@danielroy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
