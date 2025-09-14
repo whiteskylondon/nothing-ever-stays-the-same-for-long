@@ -2,11 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import photos from '@/data/photos.json'
-import { Photo } from '@/types'
+import videos from '@/data/videos.json'
+import { Photo, Video } from '@/types'
 
 export default function HomePage() {
   const allPhotos = photos as Photo[]
+  const allVideos = videos as Video[]
   const [randomPhoto, setRandomPhoto] = useState<Photo | null>(null)
   const [showNavigation, setShowNavigation] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -78,6 +81,92 @@ export default function HomePage() {
                 About
               </a>
             </nav>
+          </div>
+        </div>
+      </div>
+
+      {/* Thumbnails Section */}
+      <div className="bg-black py-16">
+        <div className="container mx-auto px-4">
+          {/* Pictures Section */}
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-serif font-light text-white mb-4">
+                Pictures
+              </h2>
+              <Link 
+                href="/pictures" 
+                className="text-sm text-white/60 hover:text-white transition-colors"
+              >
+                View all pictures →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {allPhotos.slice(0, 8).map((photo) => (
+                <Link
+                  key={photo.id}
+                  href="/pictures"
+                  className="group block"
+                >
+                  <div className="relative overflow-hidden rounded-lg aspect-square">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={photo.width}
+                      height={photo.height}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Videos Section */}
+          <div>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-serif font-light text-white mb-4">
+                Videos
+              </h2>
+              <Link 
+                href="/videos" 
+                className="text-sm text-white/60 hover:text-white transition-colors"
+              >
+                View all videos →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {allVideos.map((video) => (
+                <Link
+                  key={video.id}
+                  href="/videos"
+                  className="group block"
+                >
+                  <div className="relative overflow-hidden rounded-lg aspect-video">
+                    <Image
+                      src={`https://img.youtube.com/vi/${video.youtubeId}/maxresdefault.jpg`}
+                      alt={video.title}
+                      width={1280}
+                      height={720}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
+                        <div className="w-0 h-0 border-l-[12px] border-l-white border-y-[8px] border-y-transparent ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-white font-medium text-sm">
+                        {video.title}
+                      </h3>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
