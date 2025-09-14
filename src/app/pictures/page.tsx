@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 import photos from '@/data/photos.json'
 import { Photo } from '@/types'
@@ -10,6 +11,19 @@ export default function PicturesPage() {
   const photosData = photos as Photo[]
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0)
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    // Check if there's a photo parameter in the URL
+    const photoParam = searchParams.get('photo')
+    if (photoParam) {
+      const index = parseInt(photoParam, 10)
+      if (index >= 0 && index < photosData.length) {
+        setCurrentPhotoIndex(index)
+        setLightboxOpen(true)
+      }
+    }
+  }, [searchParams, photosData.length])
 
   const openLightbox = (index: number) => {
     setCurrentPhotoIndex(index)

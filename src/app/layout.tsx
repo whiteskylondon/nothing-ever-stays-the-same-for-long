@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon.png', type: 'image/png' },
     ],
-    apple: '/favicon.png',
+    apple: '/apple-icon.png',
   },
   openGraph: {
     title: 'nothing ever stays the same for long',

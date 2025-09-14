@@ -88,25 +88,17 @@ export default function HomePage() {
       {/* Thumbnails Section */}
       <div className="bg-black py-16">
         <div className="container mx-auto px-4">
-          {/* Pictures Section */}
+          {/* Pictures Grid */}
           <div className="mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-serif font-light text-white mb-4">
-                Pictures
-              </h2>
-              <Link 
-                href="/pictures" 
-                className="text-sm text-white/60 hover:text-white transition-colors"
-              >
-                View all pictures →
-              </Link>
-            </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {allPhotos.slice(0, 8).map((photo) => (
-                <Link
+              {allPhotos.slice(0, 8).map((photo, index) => (
+                <div
                   key={photo.id}
-                  href="/pictures"
-                  className="group block"
+                  onClick={() => {
+                    // Open lightbox directly with this photo
+                    window.location.href = `/pictures?photo=${index}`;
+                  }}
+                  className="group cursor-pointer"
                 >
                   <div className="relative overflow-hidden rounded-lg aspect-square">
                     <Image
@@ -119,24 +111,13 @@ export default function HomePage() {
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                   </div>
-                </Link>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Videos Section */}
+          {/* Videos Grid */}
           <div>
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-serif font-light text-white mb-4">
-                Videos
-              </h2>
-              <Link 
-                href="/videos" 
-                className="text-sm text-white/60 hover:text-white transition-colors"
-              >
-                View all videos →
-              </Link>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {allVideos.map((video) => (
                 <Link
